@@ -1,6 +1,5 @@
 # RNA-Seq Analysis Pipeline v1.0
 
-[![License](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
 [![Shell](https://img.shields.io/badge/Shell-Bash-green.svg)](https://www.gnu.org/software/bash/)
 [![Conda](https://img.shields.io/badge/Conda-Required-orange.svg)](https://docs.conda.io/)
 
