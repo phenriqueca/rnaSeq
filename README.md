@@ -78,45 +78,45 @@ A modular, interactive, and reproducible pipeline for RNA-Seq data analysis supp
 
 
 ```
-┌─────────────────────────────────────────────────────────────┐
-│                    01_setup.sh                              │
-│  • Project initialization                                   │
-│  • Directory structure creation                             │
-│  • Data import (local/SCP/SRA)                             │
-│  • Mode selection & persistence (.analysis_mode)           │
-└────────────────────┬────────────────────────────────────────┘
-                     │
-                     ▼
-┌─────────────────────────────────────────────────────────────┐
-│                 02_qcPipeline.sh                            │
-│  • FastQC (pre-trimming)                                    │
-│  • Interactive MultiQC review                               │
-│  • Trimmomatic (user-configured parameters)                 │
-│  • FastQC (post-trimming)                                   │
-│  • State tracking (.trimming_params checkpoint)             │
-└────────────────────┬────────────────────────────────────────┘
-                     │
-                     ▼
-┌─────────────────────────────────────────────────────────────┐
-│                 03_analysis.sh                              │
-│  ┌─────────────────────┬──────────────────────┐             │
-│  │  Expression Mode    │   De Novo Mode       │             │
-│  │  • STAR indexing    │   • Trinity assembly │             │
-│  │  • Read alignment   │   • Kallisto index   │             │
-│  │  • featureCounts    │   • Quantification   │             │
-│  └─────────────────────┴──────────────────────┘             │
-│  • Demo mode support (subsampling)                          │
-│  • Workflow script generation (reproducibility/logs/)       │
-└────────────────────┬────────────────────────────────────────┘
-                     │
-                     ▼
-┌─────────────────────────────────────────────────────────────┐
-│                04_relatorio.sh                              │
-│  • Parse MultiQC JSON                                       │
-│  • Calculate read loss metrics                              │
-│  • Generate Markdown report                                 │
-│  • Create tar.gz package (excludes raw data)               │
-└─────────────────────────────────────────────────────────────┘
+              ┌─────────────────────────────────────────────────────────────┐
+              │                    01_setup.sh                              │
+              │  • Project initialization                                   │
+              │  • Directory structure creation                             │
+              │  • Data import (local/SCP/SRA)                              │
+              │  • Mode selection & persistence (.analysis_mode)            │
+              └────────────────────┬────────────────────────────────────────┘
+                                   │
+                                   ▼
+              ┌─────────────────────────────────────────────────────────────┐
+              │                 02_qcPipeline.sh                            │
+              │  • FastQC (pre-trimming)                                    │
+              │  • Interactive MultiQC review                               │
+              │  • Trimmomatic (user-configured parameters)                 │
+              │  • FastQC (post-trimming)                                   │
+              │  • State tracking (.trimming_params checkpoint)             │
+              └────────────────────┬────────────────────────────────────────┘
+                                   │
+                                   ▼
+              ┌─────────────────────────────────────────────────────────────┐
+              │                 03_analysis.sh                              │
+              │  ┌─────────────────────┬──────────────────────┐             │
+              │  │  Expression Mode    │   De Novo Mode       │             │
+              │  │  • STAR indexing    │   • Trinity assembly │             │
+              │  │  • Read alignment   │   • Kallisto index   │             │
+              │  │  • featureCounts    │   • Quantification   │             │
+              │  └─────────────────────┴──────────────────────┘             │
+              │  • Demo mode support (subsampling)                          │
+              │  • Workflow script generation (reproducibility/logs/)       │
+              └────────────────────┬────────────────────────────────────────┘
+                                   │
+                                   ▼
+              ┌─────────────────────────────────────────────────────────────┐
+              │                04_relatorio.sh                              │
+              │  • Parse MultiQC JSON                                       │
+              │  • Calculate read loss metrics                              │
+              │  • Generate Markdown report                                 │
+              │  • Create tar.gz package (excludes raw data)                │
+              └─────────────────────────────────────────────────────────────┘
 ```
 
 ### Data Flow
