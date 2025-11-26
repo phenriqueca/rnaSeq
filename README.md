@@ -74,7 +74,7 @@ A modular, interactive, and reproducible pipeline for RNA-Seq data analysis supp
 
 ## Architecture
 
-c:\Users\phps_\Downloads\_- visual selection.png
+![Architecture Diagram] - visual selection.png
 
 ```
 ┌─────────────────────────────────────────────────────────────┐
