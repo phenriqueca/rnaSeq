@@ -78,7 +78,7 @@ A modular, interactive, and reproducible pipeline for RNA-Seq data analysis supp
 
 
 ```
-
+---
 ### Data Flow
 
 | Script             | Input          | Output                              | Next Script Uses             |
